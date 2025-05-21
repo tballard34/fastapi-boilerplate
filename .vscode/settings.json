@@ -1,0 +1,57 @@
+{
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    "prettier.printWidth": 150,
+    "prettier.tabWidth": 4,
+
+    // ty
+    "ty.experimental.completions.enable": true,
+
+    // format on save filetypes
+
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format",
+        "editor.formatOnSave": true
+    },
+
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.formatOnSave": true
+    },
+
+    "[json]": {
+        "editor.formatOnSave": true
+    },
+
+    "[jsonc]": {
+        "editor.formatOnSave": true
+    },
+
+    "[markdown]": {
+        "editor.formatOnSave": true
+    },
+    "[svg]": {
+        "editor.defaultFormatter": "jock.svg"
+    },
+    "svg.preview.background": "transparent",
+
+    "files.associations": {
+        "*.gitignore": "gitignore"
+    },
+    "[gitignore]": {
+        "editor.formatOnSave": false
+    },
+    "[toml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    }
+}
