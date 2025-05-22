@@ -1,8 +1,11 @@
 import logging
 
+from dotenv import load_dotenv
 from fastapi import FastAPI
 
 from app.utils import setup_logging
+
+load_dotenv()
 
 setup_logging()
 logger: logging.Logger = logging.getLogger(__name__)

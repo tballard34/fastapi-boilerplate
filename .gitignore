@@ -1,4 +1,5 @@
 .ruff_cache
+.env
 
 # Python-generated files
 __pycache__/
