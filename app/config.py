@@ -1,10 +1,14 @@
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from pydantic_settings import BaseSettings
 
 from app.models import EnvironmentType, LogLevelType
 
 
 class Settings(BaseSettings):
+    model_config = ConfigDict(
+        env_file=".env", env_file_encoding="utf-8", case_sensitive=False
+    )
+
     environment: EnvironmentType = Field(
         default="dev",
         description="Environment (dev/staging/prod)",
@@ -15,11 +19,6 @@ class Settings(BaseSettings):
 
     # Example environment variable
     env_var_name: str = Field(default="", description="Example environment variable")
-
-    class Config:
-        env_file: str = ".env"
-        env_file_encoding: str = "utf-8"
-        case_sensitive: bool = False
 
 
 # Global settings instance - validates on import

@@ -10,6 +10,11 @@
     "prettier.printWidth": 150,
     "prettier.tabWidth": 4,
 
+    // "files.exclude": {
+    //     "__init__.py": true,
+    //     "**/__pycache__": true
+    // },
+
     // ty
     "ty.experimental.completions.enable": true,
 

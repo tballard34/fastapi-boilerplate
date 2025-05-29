@@ -8,11 +8,11 @@ from app.models import HealthResponse, MessageResponse
 
 logger: logging.Logger = logging.getLogger(__name__)
 
-router: APIRouter = APIRouter()
+router: APIRouter = APIRouter(prefix="", tags=["Health"])
 
 
 @router.get("/", response_model=MessageResponse)
-async def read_root():
+async def root():
     logger.info("Hit / endpoint")
     logger.info(f"Environment: {settings.environment}")
     response: MessageResponse = MessageResponse(message="Hello from FastAPI!")
