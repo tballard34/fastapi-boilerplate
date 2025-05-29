@@ -10,7 +10,11 @@ load_dotenv()
 setup_logging()
 logger: logging.Logger = logging.getLogger(__name__)
 
-app: FastAPI = FastAPI()
+app: FastAPI = FastAPI(
+    title="Title",
+    description="Description",
+    version="0.0.0",
+)
 
 
 @app.get("/")
