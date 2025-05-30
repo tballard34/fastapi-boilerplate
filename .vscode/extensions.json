@@ -7,6 +7,8 @@
         "foxundermoon.shell-format",
         "astral-sh.ty",
         "ms-vscode.makefile-tools",
-        "irongeek.vscode-env"
+        "irongeek.vscode-env",
+        "nefrob.vscode-just-syntax",
+        "ms-python.python"
     ]
 }
