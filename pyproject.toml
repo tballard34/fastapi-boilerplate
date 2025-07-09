@@ -5,15 +5,24 @@ description = "Example description"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "pydantic>=2.11.4",
-    "fastapi[standard]>=0.115.12",
-    "pydantic-settings>=2.9.1",
+    "fastapi~=0.116.0",
+    "uvicorn[standard]~=0.35.0",
+    "pydantic~=2.11.7",
+    "pydantic-settings~=2.10.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest~=8.4.1",
+    "requests~=2.32.4",
+    "ruff~=0.12.2",
+    "ty~=0.0.1a14",
+    "fastapi[standard]~=0.116.0",
 ]
 
 
-[dependency-groups]
-dev = ["pytest>=8.3.5", "ruff>=0.11.9", "ty>=0.0.1a6"]
-
+[tool.ruff]
+line-length = 150
 
 [tool.ruff.lint]
 extend-select = ["E", "W", "F", "I", "SIM", "B", "UP", "FAST"]
@@ -21,5 +30,5 @@ ignore = ["E501"]
 
 
 [tool.ty]
-src.root = "./app"
+environment.root = ["./app"]
 rules.unresolved-import = "ignore"
