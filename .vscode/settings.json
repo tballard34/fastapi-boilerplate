@@ -2,29 +2,30 @@
     "editor.formatOnSave": false,
     "editor.tabSize": 4,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit",
+            "source.convertImportsFormat.ruff": "explicit"
+        }
     },
-    "prettier.printWidth": 150,
-    "prettier.tabWidth": 4,
-
     // "files.exclude": {
     //     "__init__.py": true,
     //     "**/__pycache__": true
     // },
-
     // ty
     "ty.experimental.completions.enable": true,
-
     // format on save filetypes
-
     "[shellscript]": {
         "editor.defaultFormatter": "foxundermoon.shell-format",
         "editor.formatOnSave": true
     },
-
     "[yaml]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2,
@@ -32,15 +33,12 @@
         "diffEditor.ignoreTrimWhitespace": false,
         "editor.formatOnSave": true
     },
-
     "[json]": {
         "editor.formatOnSave": true
     },
-
     "[jsonc]": {
         "editor.formatOnSave": true
     },
-
     "[markdown]": {
         "editor.formatOnSave": true
     },
@@ -48,7 +46,6 @@
         "editor.defaultFormatter": "jock.svg"
     },
     "svg.preview.background": "transparent",
-
     "files.associations": {
         "*.gitignore": "gitignore"
     },

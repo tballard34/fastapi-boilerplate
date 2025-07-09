@@ -14,7 +14,7 @@ router: APIRouter = APIRouter(prefix="", tags=["Health"])
 @router.get("/", response_model=MessageResponse)
 async def root():
     logger.info("Hit / endpoint")
-    logger.info(f"Environment: {settings.environment}")
+    logger.info("Environment: %s", settings.environment)
     response: MessageResponse = MessageResponse(message="Hello from FastAPI!")
     return JSONResponse(content=response.model_dump(), status_code=200)
 

@@ -10,5 +10,8 @@
         "irongeek.vscode-env",
         "nefrob.vscode-just-syntax",
         "ms-python.python"
+    ],
+    "unwantedRecommendations": [
+        "ms-python.pylint" // use ruff instead
     ]
 }

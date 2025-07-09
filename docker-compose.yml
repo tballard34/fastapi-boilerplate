@@ -1,5 +1,6 @@
 services:
     container-name:
+        platform: linux/arm64
         build:
             context: .
             dockerfile: Dockerfile
@@ -7,13 +8,5 @@ services:
         ports:
             - "8500:8500"
         env_file:
-            - .env
-        environment:
-            - PYTHONPATH=/app
+            - .env.local # must create this .env.local file
         restart: unless-stopped
-        healthcheck:
-            test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8500/health')"]
-            interval: 30s
-            timeout: 10s
-            retries: 3
-            start_period: 40s

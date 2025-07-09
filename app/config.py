@@ -5,17 +5,14 @@ from app.models import EnvironmentType, LogLevelType
 
 
 class Settings(BaseSettings):
-    model_config = ConfigDict(
-        env_file=".env", env_file_encoding="utf-8", case_sensitive=False
-    )
+    model_config = ConfigDict(env_file_encoding="utf-8", case_sensitive=False)
 
     environment: EnvironmentType = Field(
-        default="dev",
-        description="Environment (dev/staging/prod)",
+        description="Environment (local/dev/staging/prod)",
     )
 
     # Logging
-    log_level: LogLevelType = Field(default="INFO", description="Logging level")
+    log_level: LogLevelType = Field(description="Logging level")
 
     # Example environment variable
     env_var_name: str = Field(default="", description="Example environment variable")

@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+.py
+
+.ruff_cache/
+.pytest_cache/
+.env*
+
+*.csv
+*.sql
