@@ -1,10 +1,12 @@
+import logging
+
 from fastapi import FastAPI
 
 from app.router import router
-from app.utils import get_logger, setup_logging
+from app.utils import setup_logging
 
 setup_logging()
-logger = get_logger(__name__)
+logger: logging.Logger = logging.getLogger(__name__)
 
 logger.info("example-name starting up - logging configured")
 

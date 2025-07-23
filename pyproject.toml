@@ -18,6 +18,7 @@ dev = [
     "ruff~=0.12.2",
     "ty~=0.0.1a14",
     "fastapi[standard]~=0.116.0",
+    "pytest-asyncio>=1.1.0",
 ]
 
 

@@ -9,7 +9,3 @@ def setup_logging(log_file=None):
         format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
         handlers=[logging.StreamHandler()],
     )
-
-
-def get_logger(name: str) -> logging.Logger:
-    return logging.getLogger(name)

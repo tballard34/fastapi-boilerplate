@@ -1,12 +1,17 @@
-import logging
+import json
 
-from app.utils import get_logger
+import pytest
+
+from app.endpoints.health import health
 
 
-def test_get_logger_returns_correct_logger():
-    """Ensure get_logger returns a logging.Logger with the given name."""
-    logger_name = "sample-test-logger"
-    logger = get_logger(logger_name)
+@pytest.mark.asyncio
+async def test_health_endpoint_returns_ok_status():
+    """Ensure health endpoint returns correct status and response format."""
+    response = await health()
 
-    assert isinstance(logger, logging.Logger)
-    assert logger.name == logger_name
+    assert response.status_code == 200
+
+    # Parse the JSON content
+    content = json.loads(response.body)
+    assert content == {"status": "ok"}
